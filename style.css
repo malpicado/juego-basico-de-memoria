@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 25px 0;
+    background: #018001;
+}
+
+h1{
+    font-family: "ubuntu mono";
+    padding: 25px;
+    color: #F8EE1E;
+    text-align: center;
+}
+
+.Grid{
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.Card {
+    position: relative;
+    transition: all 0.5s linear;
+    transform-style: preserve-3d;
+    margin: 6px;
+}
+
+.Card, .back, .front{
+    height: 150px;
+    width: 150px;
+    border-radius: 15px;
+}
+
+.back, .front {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front{
+    z-index: 2;
+    background: #eee url(oculto.png) no-repeat center center / contain;
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: aquamarine;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.Selected {
+    transform: rotateY(180deg);
+}
+
+.Match .front {
+    background: #01e450 !important;
+}
+
+h4, a {
+    color: #eee;
+    text-align: center;
+    font-family: "ubuntu mono";
+    font-size: 18px;
+}
